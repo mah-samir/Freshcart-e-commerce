@@ -1,0 +1,24 @@
+<div class="container mx-auto py-10">
+    <h2 class="text-2xl font-bold mb-6">Products in this Category</h2>
+
+    @if (loading) {
+    <p class="text-gray-500">Loading products...</p>
+    }
+    @else if (errorMessage) {
+    <p class="text-red-500">{{ errorMessage }}</p>
+    }
+    @else if (categoryList.length > 0) {
+    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+        @for (product of categoryList; track product._id) {
+        <div class="border rounded-lg shadow hover:shadow-lg transition p-4">
+            <img [src]="product.imageCover" alt="{{product.title}}" class="w-full h-40 object-contain mb-3">
+            <h3 class="text-lg font-semibold">{{ product.title }}</h3>
+            <p class="text-green-600 font-bold">{{ product.price | currency }}</p>
+        </div>
+        }
+    </div>
+    }
+    @else {
+    <p class="text-gray-500">No products found in this category.</p>
+    }
+</div>

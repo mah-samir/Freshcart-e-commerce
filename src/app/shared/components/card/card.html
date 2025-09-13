@@ -1,0 +1,38 @@
+<!-- <div class="card border p-2 overflow-hidden group/card">
+    <div [routerLink]="['/details',product.title,product._id]" class="cursor-pointer">
+        <img class="w-full rounded-t h-[12.5rem] object-contain" [src]="product.imageCover" alt="product.title">
+        <h3 class="text-green-600">{{product.category.name}}</h3>
+        <h4 class="text-sm">{{product.title |pTerm:3}}</h4>
+        <div class="flex justify-between">
+            <span>{{product.price |currency:'GBP'}} EGP</span>
+            <span><i class="text-amber-400 fas fa-star"></i> {{product.ratingsAverage}}</span>
+        </div>
+    </div>
+
+    <button (click)="addProductItemToCart(product._id)"
+        class="btn translate-y-[122%] group-hover/card:translate-y-0">Add to
+        Cart</button>
+</div> -->
+<div
+    class=" card border rounded-2xl shadow-md p-3 overflow-hidden group/card bg-white transition-all duration-300 hover:shadow-xl hover:-translate-y-1 flex flex-col h-full">
+    <div [routerLink]="['/details',product.title,product._id]" class="cursor-pointer flex-grow flex flex-col">
+
+        <img class="w-full rounded-xl h-[13rem] object-cover transition-transform duration-300 group-hover/card:scale-105"
+            [src]="product.imageCover" alt="product.title">
+
+        <h3 class="text-green-700 font-semibold mt-3">{{product.category.name}}</h3>
+        <h4 class="text-gray-700 text-sm mb-2">{{product.title |pTerm:3}}</h4>
+
+        <div class="flex justify-between items-center text-sm font-medium mt-auto">
+            <span class="text-gray-800">{{product.price |currency:'GBP'}} <span class="text-gray-500">EGP</span></span>
+            <span class="flex items-center text-yellow-500">
+                <i class="fas fa-star mr-1"></i> {{product.ratingsAverage}}
+            </span>
+        </div>
+    </div>
+
+    <button (click)="addProductItemToCart(product._id)"
+        class=" cursor-pointer translate-y-[135%] group-hover/card:translate-y-0 w-full mt-3 py-2 rounded-xl bg-green-600 text-white font-medium shadow-md transition-all duration-300 hover:bg-green-700 hover:shadow-lg">
+        Add to Cart
+    </button>
+</div>

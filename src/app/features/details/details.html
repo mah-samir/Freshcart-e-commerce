@@ -1,0 +1,101 @@
+<!-- <section>
+    <h2 class="text-center text-6xl my-6">Details</h2>
+    <div class="container">
+        <div class="grid sm:grid-cols-12 items-center">
+            <div class=" col-span-3">
+                <img class="w-full" [src]="productDetails.imageCover" [alt]="productDetails.title">
+            </div>
+            <div class=" col-span-9">
+                <h2 class="text-2xl font-bold">{{productDetails.title}}</h2>
+                <p class="text-gray-500 text-sm my-2 ">{{productDetails.description}}</p>
+                <span>{{productDetails.category.name}}</span>
+                <div class="flex justify-between items-center">
+                    <span>{{productDetails.price}}EGP</span>
+                    <span> <i class="fas fa-star text-amber-400"></i>
+                        {{productDetails.ratingsAverage}}</span>
+                </div>
+                <button class="btn mt-2"> Add to cart</button>
+            </div>
+        </div>
+
+    </div>
+</section> -->
+
+<!-- 
+<section class="py-10 bg-gray-50">
+    <h2 class="text-center text-4xl font-semibold mb-10 text-gray-800">Product Details</h2>
+
+    <div class="container mx-auto grid md:grid-cols-12 gap-8 bg-white rounded-2xl shadow-lg p-8">
+        <div class="md:col-span-5 flex items-center justify-center">
+            <img class="w-full max-w-sm rounded-xl shadow-md object-contain" [src]="productDetails.imageCover"
+                [alt]="productDetails.title">
+        </div>
+
+
+        <div class="md:col-span-7 flex flex-col justify-between">
+            <div>
+                <h2 class="text-3xl font-bold text-gray-900 mb-3">{{productDetails.title}}</h2>
+                <p class="text-gray-600 text-base leading-relaxed mb-4">
+                    {{productDetails.description}}
+                </p>
+                <span class="inline-block px-3 py-1 text-sm bg-green-100 text-green-700 rounded-full mb-4">
+                    {{productDetails.category.name}}
+                </span>
+            </div>
+
+            <div class="flex items-center justify-between mt-4">
+                <span class="text-2xl font-semibold text-green-600">{{productDetails.price}} EGP</span>
+
+                <span class="flex items-center text-lg font-medium text-gray-700">
+                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                    {{productDetails.ratingsAverage}}
+                </span>
+            </div>
+
+            <button
+                class="mt-2 w-full md:w-1/2 py-3 bg-green-600 hover:bg-green-700 text-white text-lg font-medium rounded-lg shadow transition-all duration-300">
+                Add to cart
+            </button>
+        </div>
+    </div>
+</section> -->
+
+<section class="py-10 bg-gray-50">
+    <h2 class="text-center text-4xl font-semibold mb-10 text-gray-800">Product Details</h2>
+
+    <div class="container mx-auto grid md:grid-cols-2 gap-8 bg-white rounded-2xl shadow-lg p-6">
+        <!-- Product Image -->
+        <div class="flex items-center justify-center">
+            <img class="w-full max-w-sm rounded-xl shadow-md object-contain" [src]="productDetails.imageCover"
+                [alt]="productDetails.title">
+        </div>
+
+        <!-- Product Info -->
+        <div class="flex flex-col justify-center">
+            <h2 class="text-2xl font-bold text-gray-900 mb-2">{{productDetails.title}}</h2>
+            <p class="text-gray-600 text-sm leading-relaxed mb-3">
+                {{productDetails.description}}
+            </p>
+
+            <!-- Category -->
+            <span class="inline-block px-3 py-1 text-xs bg-green-100 text-green-700 rounded-full mb-3">
+                {{productDetails.category.name}}
+            </span>
+
+            <!-- Price + Rating -->
+            <div class="flex items-center justify-between mb-4">
+                <span class="text-xl font-semibold text-green-600">{{productDetails.price}} EGP</span>
+                <span class="flex items-center text-gray-700">
+                    <i class="fas fa-star text-yellow-400 mr-1"></i>
+                    {{productDetails.ratingsAverage}}
+                </span>
+            </div>
+
+            <!-- Add to Cart -->
+            <button
+                class="w-full md:w-auto px-6 py-2 bg-green-600 hover:bg-green-700 text-white text-sm font-medium rounded-lg shadow transition-all duration-300">
+                Add to cart
+            </button>
+        </div>
+    </div>
+</section>

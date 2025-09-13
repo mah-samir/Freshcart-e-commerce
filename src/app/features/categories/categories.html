@@ -1,0 +1,13 @@
+<section class="p-6">
+    <h2 class="text-2xl font-bold mb-6 text-center">Categories</h2>
+
+    <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+        @for (category of categoryList; track category._id) {
+        <div class="border rounded-lg shadow hover:shadow-lg transition p-4 text-center cursor-pointer">
+            <img [src]="category.image" [alt]="category.name" class="w-full h-32 object-contain mb-3"  [routerLink]="['/categories', category._id]" />
+
+            <h3 class="text-lg font-medium">{{ category.name }}</h3>
+        </div>
+        }
+    </div>
+</section>
